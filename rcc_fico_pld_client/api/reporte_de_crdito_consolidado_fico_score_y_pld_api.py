@@ -660,9 +660,7 @@ class ReporteDeCrditoConsolidadoFICOScoreYPLDApi(object):
         :param str x_api_key: ConsumerKey obtenido desde el portal de desarrolladores (required)
         :param str username: Usuario de Círculo de Crédito (required)
         :param str password: Contraseña de Círculo de Crédito (required)
-        :param PersonaPeticion request:  (required)
-        :param str x_full_report: Indicador si se quiere obtener el reporte en una sola petición true; en caso de requerirse de manera segmentada será false
-        :return: Respuesta
+        :param PersonaPeticion request:  (required)        :return: Respuesta
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -688,13 +686,12 @@ class ReporteDeCrditoConsolidadoFICOScoreYPLDApi(object):
         :param str username: Usuario de Círculo de Crédito (required)
         :param str password: Contraseña de Círculo de Crédito (required)
         :param PersonaPeticion request:  (required)
-        :param str x_full_report: Indicador si se quiere obtener el reporte en una sola petición true; en caso de requerirse de manera segmentada será false
         :return: Respuesta
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = [ 'x_api_key', 'username', 'password', 'request', 'x_full_report']  # noqa: E501
+        all_params = [ 'x_api_key', 'username', 'password', 'request', ]  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -739,8 +736,6 @@ class ReporteDeCrditoConsolidadoFICOScoreYPLDApi(object):
             header_params['username'] = params['username']  # noqa: E501
         if 'password' in params:
             header_params['password'] = params['password']  # noqa: E501
-        if 'x_full_report' in params:
-            header_params['x-full-report'] = params['x_full_report']  # noqa: E501
 
         form_params = []
         local_var_files = {}
