@@ -204,7 +204,7 @@ De igual manera, en el archivo **testRCC.py**, se deberá modificar el siguiente
         )
         try:
    
-            api_response=self.api.get_reporte( x_api_key=self.x_api_key, username=self.username, password=self.password, request=body,x_full_report=True)
+            api_response=self.api.get_reporte( x_api_key=self.x_api_key, username=self.username, password=self.password, request=body)
             print(api_response)
         except ApiException as e:
             print("Exception when calling TestRCC->test_reporte: %s\n" % e)
